@@ -1,0 +1,139 @@
+.SearchCard {
+    display: flex;
+    position: relative;
+    margin: 0 20px;
+    padding: 20px;
+    border-bottom: 1px solid lightgray;
+}
+
+.SearchCard > img:hover {
+    scale: 1.1;
+    margin-right: 10px;
+}
+
+.SearchCard > img {
+    height: 200px;
+    width: 350px;
+    border-radius: 10px;
+    overflow: hidden;
+    object-fit: cover;
+}
+
+.SearchCard__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-left: 20px;
+    width: 100%;
+}
+
+.SearchCard__heart {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+}
+
+.SearchCard__infoTop {
+    width: 40vw;
+}
+
+.SearchCard__infoTop > h3 {
+    display: inline-block;
+    font-weight: 300;
+    margin-top: 10px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.SearchCard__infoTop > p {
+    margin-top: 10px;
+    font-size: 13px;
+    color: gray;
+}
+
+.SearchCard__infoTop > p:first-child {
+    width: 30vw;  
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;   
+}
+  
+.SearchCard__infoBottom {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.SearchCard__Location {
+    color: #ca3433;
+}
+
+
+.SearchCard__Locations {
+    display: flex;
+    align-items: center;
+}
+
+.SearchCards__price > p {
+    text-align: right;
+    font-size: 13px;
+    color: gray;
+  }
+
+.SearchCards__price {
+    bottom: 20px;
+    right: 30px;
+}
+
+.SearchCardMobile {
+    display: none;
+    position: relative;
+    //margin: 0 20px;
+    padding: 20px;
+    border-bottom: 1px solid lightgray;
+}
+
+.SearchCardMobile__image {
+    height: 200px;
+    border-radius: 10px;
+    overflow: hidden;
+    object-fit: cover;
+    display: flex;
+    justify-content: center;
+}
+
+.SearchCardMobile__infoTop {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    margin-bottom: -6px;
+}
+
+.SearchCardMobile__infoTop > p {
+    width: 80vw;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.SearchCardMobile__body > p{
+    margin: 15px 0;
+    color: gray;
+}
+
+.SearchCardMobile__infoBottom{
+    display: flex;
+    justify-content: space-between;
+}
+
+@media only screen and (max-width: 450px) {
+    .SearchCard{
+        display: none;
+    }
+    .SearchCardMobile{
+        display: block;
+    }
+    .Dropdown-root {
+        width: 100%;
+    }
+}

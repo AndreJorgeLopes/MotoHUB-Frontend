@@ -1,0 +1,47 @@
+{
+  "name": "pap",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@material-ui/core": "^4.11.3",
+    "@material-ui/icons": "^4.11.2",
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.5.0",
+    "@testing-library/user-event": "^7.2.1",
+    "axios": "^0.21.1",
+    "date-fns": "^2.15.0",
+    "qs": "^6.9.6",
+    "react": "^16.13.1",
+    "react-date-picker": "^8.1.0",
+    "react-date-range": "^1.0.3",
+    "react-dom": "^16.13.1",
+    "react-dropdown": "^1.9.2",
+    "react-images-upload": "^1.2.8",
+    "react-intl-tel-input": "^8.0.4",
+    "react-responsive-carousel": "^3.2.13",
+    "react-responsive-combo-box": "^1.2.4",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "3.4.3"
+  },
+  "scripts": {
+    "start": "SET PORT=80 && react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
