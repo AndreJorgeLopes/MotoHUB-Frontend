@@ -84,7 +84,7 @@ function PostPage() {
                 images.push(
                     <div style={{maxHeight:'500px'}} key={image.id}>
                         <img 
-                            src={`http://${window.location.hostname}:8000/files/${image.image}`} 
+                            src={`${process.env.REACT_APP_API_URL || (window.location.href.slice(0, -1) + ':8000')}/files/${image.image}`} 
                             alt=''
                             />
                     </div>

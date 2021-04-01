@@ -71,7 +71,7 @@ function Home() {
             <div className='home__section'>
                 {posts.map((i, index) => (
                     <Card
-                        src= {`${window.location.href.slice(0, -1)}:8000/files/${posts[index].postImages[0].image}`}
+                        src= {`${process.env.REACT_APP_API_URL || (window.location.href.slice(0, -1) + ':8000')}/files/${posts[index].postImages[0].image}`}
                         title={`${posts[index].model.brand.name} ${posts[index].model.name} ${posts[index].model.engine_size}`}
                         description= {[
                             `${posts[index].odometer.toLocaleString('fr')} km`,

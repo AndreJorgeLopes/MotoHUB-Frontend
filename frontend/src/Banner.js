@@ -17,7 +17,7 @@ function Banner() {
                     {showSearch ? "Hide" : "Search"}
                 </Button>
             </div>
-            <div className='banner'>
+            <div className='banner' style={{background: `url("${process.env.REACT_APP_API_URL || (window.location.href.slice(0, -1) + ':8000')}/files/background.jpeg") no-repeat`}}>
                 <div className='banner__info'>
                     <h1>Centralizing the motorcycle world</h1>
                     <h5>
