@@ -21,7 +21,7 @@ function Header() { /* eslint-disable  */
             if(logged){
                 await api.get(`account/${getUser()}`).then(async res => {
                     user = res.data;
-                    setavatar(<img src={`http://fudeu.duckdns.org:8000/files/${user.avatar}`}/>)
+                    if (user.avatar) setavatar(<img src={`${process.env.REACT_APP_API_URL || (window.location.href.slice(0, -1) + ':8000')}/files/${user.avatar}`}/>)
                 });
             }
     

@@ -8,7 +8,7 @@ const app = express();
 
 const http = require("http").createServer(app);
 const io = require("socket.io")(http);
-initListeners(io);//ver se funciona
+initListeners(io);
 
 require('pg').defaults.parseInt8 = true;
 require('../database')
@@ -23,7 +23,7 @@ app.use(
 app.use(`/api`,routes);
 
 app.listen(config.port, async () => {
-    console.log(`App running at http://localhost:${config.port}`);
+    console.log(`App running at port ${config.port}`);
 });
 
 /* 
