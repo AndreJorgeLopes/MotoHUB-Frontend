@@ -1,6 +1,7 @@
 .banner {
-  background-position: center;
-  background-size: cover;
+  background: url("http://fudeu.duckdns.org:8000/files/background.jpeg") no-repeat;
+  background-position: 50% !important;
+  background-size: cover !important;
   text-align: center;
   margin: 0 auto;
   overflow: hidden;
