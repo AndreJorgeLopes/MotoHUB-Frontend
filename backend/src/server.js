@@ -20,7 +20,7 @@ app.use(
     "/files",
     express.static(path.resolve(__dirname, "..", "public", "uploads"))
   );
-app.use(`/api/${config.key}`,routes);
+app.use(`/api`,routes);
 
 app.listen(config.port, async () => {
     console.log(`App running at http://localhost:${config.port}`);
@@ -40,18 +40,13 @@ const socket = io({
   } 
 })
 
-religar o envio de email de registo
-
 no controller das transactions tenho de meter o adyen a funcionar
 criar email de compras e meter no controller
 
-verificar se o email existe ao criar um user e mandar email de verificação
+Mandar email de verificação ao user
 
 ao tentar criar uma conversa verificar se é a primeira
 ->se for a primeira conversa, usar o controller de criar chat
 
 tentar implementar 'vista' nas mensagens
-
-----------------------------------------------------------------
-meter os datatypes e as tabelas atualizados no vertabelo
 */

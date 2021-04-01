@@ -2,7 +2,7 @@ import axios from "axios";
 import { getToken } from "./auth";
 
 const api = axios.create({
-  baseURL: "http://fudeu.duckdns.org:8000/api/JAzC@dqWgX5GY4ex",
+  baseURL: process.env.REACT_APP_API_URL,
 });
 
 api.interceptors.request.use(async config => {

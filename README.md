@@ -28,17 +28,23 @@ npm install
 <br>
 
 ## 📱 Usage
-
-To Start React JS, all you have to do is run this line
+### Frontend
+To Start React JS, all you have to do is run this lines
 ```sh
+cd fronend
 npm run start
 ```
-
+### Backend
+To Start Node JS, all you have to do is run this lines
+```sh
+cd backend
+npm run start
+```
 <br>
 
 ## 💙  question FAQ
 
-If you have any question then please use the following Email: ``general@motohub.pt``.
+If you have any question then please use the following Email: ``general@motohub.pt``
 
 <br>
 

@@ -4,6 +4,7 @@ const Post = require('../../models/Post');
 const City = require('../../models/City');
 const mail = require('../../emails');
 const bcrypt = require('bcrypt');
+const emailExistence = require('email-existence');
 
 const multerConfig = require("../../../config/multer");
 const multer  = require('multer');
@@ -35,6 +36,10 @@ module.exports = {
         }
         
         else if (city) var { id: city_id }  = await City.findOne({where: { name: city }});
+
+        emailExistence.check(email, function(error, response){
+            if(!response) return res.status(404).send({ error: "Email address does not exist" });
+        });
 
         await bcrypt.hash(password, 10, function(err, hash) {
             if (err) {

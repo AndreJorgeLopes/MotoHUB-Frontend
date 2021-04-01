@@ -70,7 +70,8 @@ typings/
 .yarn-integrity
 
 # dotenv environment variables file
-.env
+frontend/src/.env
+backend/src/.env
 .env.test
 
 # parcel-bundler cache (https://parceljs.org/)
@@ -103,3 +104,5 @@ dist
 
 # TernJS port file
 .tern-port
+# Local Netlify folder
+.netlify

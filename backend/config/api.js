@@ -1,4 +1,3 @@
 module.exports = {
-    port: 8000,
-    key: 'JAzC@dqWgX5GY4ex'
+    port: process.env.PORT || 8000
 }
