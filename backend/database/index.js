@@ -2,6 +2,7 @@ const postsBackupJob = require('../src/jobs/postsBackup');
 const couponsBackupJob = require('../src/jobs/couponsBackup');
 const Sequelize = require('sequelize');
 let dbConfig = require('../config/database');
+let connection = '';
 
 var models = [];
 const normalizedPath = require('path').join(__dirname, '/../src/models');
@@ -12,7 +13,7 @@ require('fs').readdirSync(normalizedPath).forEach(file => {
 });
 
 if (process.env.DATABASE_URL) {
-    dbConfig = process.env.DATABASE_URL, {
+    connection = new Sequelize(process.env.DATABASE_URL, {
         dialect: 'postgres',
         protocol: 'postgres',
         logging: false,
@@ -20,12 +21,13 @@ if (process.env.DATABASE_URL) {
             underscored: true
         },
         dialectOptions: {
-            ssl: true
+            ssl: {
+                require: true,
+                rejectUnauthorized: false
+            }
         }
-    }
-}
-
-const connection = new Sequelize(dbConfig);
+    });
+} else connection = new Sequelize(dbConfig);
 
 models.forEach(model => {
     model.init(connection);
