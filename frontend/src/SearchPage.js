@@ -171,7 +171,7 @@ function SearchPage() {
                     location={`${post.user.city.name} (${post.user.city.region.name})`}
                     price={`${post.price} €`}
                     negotiable={post.is_price_negotiable}
-                    image={`http://${window.location.hostname}:8000/files/${post.postImages[0].image}`}
+                    image={`${process.env.REACT_APP_API_URL || (window.location.href.slice(0, -1) + ':8000')}/files/${post.postImages[0].image}`}
                     postId={post.id}
                     key={post.id}
                 />
