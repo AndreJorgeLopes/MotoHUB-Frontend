@@ -4,7 +4,7 @@ const cron = require('node-cron');
 const mail = require('../emails');
 
 module.exports = async user => {
-    const date = new Date;
+    let date = new Date;
 
     const seconds = date.getSeconds();
     const minutes = date.getMinutes();
