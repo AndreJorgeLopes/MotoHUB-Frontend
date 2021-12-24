@@ -9,7 +9,6 @@
 - [ ] Redesign the React JS components
 
 - [ ] Account Page
-- [ ] Adding socket.io system
 
 - [ ] React Native App
 
@@ -18,9 +17,9 @@
 <br>
 
 ## 💻 Install
-First you need to install Nodejs and npm, this is different depending on the OS you are running so it is easier to check the node [page](https://nodejs.org/en/download/)
+First you need to install npm, this is different depending on the OS you are running so it is easier to check the node [page](https://nodejs.org/en/download/)
 
-Install the needed packages both in the ``frontend`` and ``backend`` folders of the project
+Install the needed packages using the following command
 ```sh
 npm install
 ```
@@ -28,16 +27,9 @@ npm install
 <br>
 
 ## 📱 Usage
-### Frontend
 To Start React JS, all you have to do is run this lines
 ```sh
-cd fronend
-npm run start
-```
-### Backend
-To Start Node JS, all you have to do is run this lines
-```sh
-cd backend
+cd frontend
 npm run start
 ```
 <br>
@@ -67,4 +59,4 @@ Give a ⭐️ if this project helped you!
 
 Copyright © 2021 [AndreJorgeLopes](https://github.com/AndreJorgeLopes).
 
-This project is [MIT License](https://github.com/AndreJorgeLopes/MotoHUB/blob/main/LICENSE) licensed. Some of the dependencies are licensed differently.
+This project is [MIT License](https://github.com/AndreJorgeLopes/MotoHUB-Frontend/blob/main/LICENSE) licensed. Some of the dependencies are licensed differently.
